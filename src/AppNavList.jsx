@@ -1,10 +1,19 @@
 import { NavLink } from "react-router-dom";
+import { useGlobalContext } from "./context/GlobalContext"
 
 export default function AppNavList() {
+
+    const { navMenu } = useGlobalContext()
+
     return (
         <>
-            <NavLink to='/'>Home</NavLink>
-            <NavLink to='/ListPage'>List</NavLink>
+            <nav>
+                {navMenu.map((curLink, index) => (
+                    <span key={index}>
+                        <NavLink to={curLink.path}>{curLink.title}</NavLink>
+                    </span>
+                ))}
+            </nav>
         </>
     );
 }
