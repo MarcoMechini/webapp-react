@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export default function MovieCard({ movieList }) {
 
     const movie = movieList.data
@@ -11,6 +13,7 @@ export default function MovieCard({ movieList }) {
                     <p>{curMovie.abstract}</p>
                     <span>Genre: {curMovie.genre}</span>
                     <span>Last Update: {curMovie.updated_at}</span>
+                    <Link to={`/ListPage/${curMovie.id}`}>Dettagli</Link>
                 </li>
             ))}
         </>
