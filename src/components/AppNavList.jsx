@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { useGlobalContext } from "./context/GlobalContext"
+import { useGlobalContext } from "../context/GlobalContext"
 
 export default function AppNavList() {
 

@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { GlobalProvider } from './context/GlobalContext'
 import HomePage from './pages/HomePage'
 import ListPage from './pages/ListPage'
-import AppLayout from './AppLayout'
+import AppLayout from './layout/AppLayout'
 import DetailPage from './pages/DetailPage'
 
 
